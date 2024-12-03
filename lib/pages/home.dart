@@ -33,7 +33,7 @@ void getUserId() {
     // Clear session data, if any
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage()),
+      MaterialPageRoute(builder: (context) => const LoginPage()),
     );
   }
   
