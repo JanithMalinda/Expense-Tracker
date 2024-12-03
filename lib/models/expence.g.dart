@@ -18,7 +18,7 @@ class ExpenceModelAdapter extends TypeAdapter<ExpenceModel> {
     };
     return ExpenceModel(
       id: fields[0] as String,
-      title: fields[1] as String,
+      amount: fields[1] as String,
       decsription: fields[2] as String,
       date: fields[3] as DateTime,
       category: fields[4] as Category,
@@ -32,7 +32,7 @@ class ExpenceModelAdapter extends TypeAdapter<ExpenceModel> {
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
-      ..write(obj.title)
+      ..write(obj.amount)
       ..writeByte(2)
       ..write(obj.decsription)
       ..writeByte(3)

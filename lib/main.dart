@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       //   '/login': (context) => LoginPage(), // Login page route
       //   '/signup': (context) => SignUpPage(), // Sign-Up page route
       // },
-      home: const Expences(),
+      home: const LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }

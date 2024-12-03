@@ -13,16 +13,16 @@ class Database {
     expenceList = [
       ExpenceModel(
           id: const Uuid().v4(),
-          title: "Pepper",
+          amount: "\$100",
           decsription: "this is a test description",
           date: DateTime.now(),
-          category: Category.low),
+          category: Category.expense),
       ExpenceModel(
           id: const Uuid().v4(),
-          title: "Tomato",
+          amount: "\$300",
           decsription: "this is a test description",
           date: DateTime.now(),
-          category: Category.lowest)
+          category: Category.income)
     ];
   }
 

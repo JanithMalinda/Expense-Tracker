@@ -1,3 +1,4 @@
+import 'package:expense_tracker/pages/expences.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -43,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
          if (role == 'customer') {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => const Home()),
+            MaterialPageRoute(builder: (context) => const Expences()),
           );
         } else {
           Fluttertoast.showToast(

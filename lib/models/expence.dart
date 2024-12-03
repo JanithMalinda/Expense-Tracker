@@ -12,21 +12,23 @@ final uuid = const Uuid().v4();
 final formatedDate = DateFormat.yMd();
 
 //enum for categories
-enum Category { lowest, low, high, highst }
+enum Category { income, expense }
 
 //category icons
 final CategoryIcons = {
-  Category.lowest: Icons.lunch_dining,
-  Category.low: Icons.travel_explore,
-  Category.high: Icons.leave_bags_at_home_rounded,
-  Category.highst: Icons.work,
+  // Category.lowest: Icons.lunch_dining,
+  // Category.low: Icons.travel_explore,
+  // Category.high: Icons.leave_bags_at_home_rounded,
+  // Category.highst: Icons.work,
+  Category.income: Icons.arrow_upward,
+  Category.expense: Icons.arrow_downward,
 };
 
 @HiveType(typeId: 1)
 class ExpenceModel {
   ExpenceModel({
     required this.id,
-    required this.title,
+    required this.amount,
     required this.decsription,
     required this.date,
     required this.category,
@@ -36,7 +38,7 @@ class ExpenceModel {
   final String id;
 
   @HiveField(1)
-  final String title;
+  final String amount;
 
   @HiveField(2)
   final String decsription;

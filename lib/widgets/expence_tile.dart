@@ -18,20 +18,23 @@ class ExpenceItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              expence.title,
-              style: Theme.of(context).textTheme.titleLarge,
+              expence.amount,
+              style: TextStyle(
+                fontSize: 20,
+                color: (expence.category== Category.income)? Colors.green: Colors.red,
+              ),
             ),
-            Text(expence.id),
+            // Text(expence.id),
             const SizedBox(height: 4),
             Row(
               children: [
                 Text(
-                  '\$${expence.decsription}',
+                  '${expence.decsription}',
                 ),
                 const Spacer(),
                 Row(
                   children: [
-                    Icon(CategoryIcons[expence.category]),
+                    Icon(CategoryIcons[expence.category],color: (expence.category== Category.income)? Colors.green: Colors.red ,),
                     const SizedBox(width: 8),
                     Text(expence.formattdeDateValue),
                   ],

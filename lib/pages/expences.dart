@@ -21,12 +21,12 @@ class _ExpencesState extends State<Expences> {
 
   // final List<ExpenceModel> _expenseList = [
   //   ExpenceModel(
-  //       title: "Pepper",
+  //       amount: "Pepper",
   //       amount: 10,
   //       date: DateTime.now(),
   //       category: Category.food),
   //   ExpenceModel(
-  //       title: "Tomato",
+  //       amount: "Tomato",
   //       amount: 12.5,
   //       date: DateTime.now(),
   //       category: Category.travel)
@@ -43,10 +43,10 @@ class _ExpencesState extends State<Expences> {
           onAddExpence: addNewExpence,
           expence: ExpenceModel(
             id: uuid,
-            title: "",
+            amount: "",
             decsription: "",
             date: DateTime.now(),
-            category: Category.lowest,
+            category: Category.expense,
           ),
         );
       },
@@ -206,7 +206,7 @@ class _ExpencesState extends State<Expences> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 0, 81, 255),
-        title: const Text("Task Manager"),
+        title: const Text("TASK MANAGER"),
         elevation: 0,
         actions: [
           Container(

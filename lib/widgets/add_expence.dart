@@ -13,11 +13,11 @@ class AddNewExpencce extends StatefulWidget {
 }
 
 class _AddNewExpencceState extends State<AddNewExpencce> {
-  final _titleController = TextEditingController();
+  final _amountController = TextEditingController();
   final _descController = TextEditingController();
 
   DateTime _selectedDate = DateTime.now();
-  Category _selectedCategory = Category.lowest;
+  Category _selectedCategory = Category.income;
 
   final DateTime initialDate = DateTime.now();
   final DateTime firstDate = DateTime(
@@ -45,7 +45,7 @@ class _AddNewExpencceState extends State<AddNewExpencce> {
     // Form validation
     // final _enteredAmount = double.tryParse(_amountController.text.trim());
 
-    if (_titleController.text.trim().isEmpty || _descController.text.isEmpty) {
+    if (_amountController.text.trim().isEmpty || _descController.text.isEmpty) {
       // Show an error message
       showDialog(
         useSafeArea: true,
@@ -79,20 +79,20 @@ class _AddNewExpencceState extends State<AddNewExpencce> {
       ExpenceModel updatedExpence;
       print(widget.expence.id);
 
-      // If the expense has a title, it means it's an existing expense, so update it
-      if (widget.expence.title.isNotEmpty) {
+      // If the expense has a amount, it means it's an existing expense, so update it
+      if (widget.expence.amount.isNotEmpty) {
         updatedExpence = ExpenceModel(
           id: widget.expence.id,
-          title: _titleController.text,
+          amount: "\$${_amountController.text}",
           decsription: _descController.text,
           date: _selectedDate,
           category: _selectedCategory,
         );
       } else {
-        // If the existing expense doesn't have a title, it means it's a new expense
+        // If the existing expense doesn't have a amount, it means it's a new expense
         updatedExpence = ExpenceModel(
           id: const Uuid().v4(),
-          title: _titleController.text,
+          amount: "\$${_amountController.text}",
           decsription: _descController.text,
           date: _selectedDate,
           category: _selectedCategory,
@@ -110,7 +110,7 @@ class _AddNewExpencceState extends State<AddNewExpencce> {
   //dispose methodes (this will clear the data form)
   @override
   void dispose() {
-    _titleController.dispose();
+    _amountController.dispose();
     _descController.dispose();
     super.dispose();
   }
@@ -120,8 +120,8 @@ class _AddNewExpencceState extends State<AddNewExpencce> {
   void initState() {
     super.initState();
     //set the initial values for the form
-    if (widget.expence.title.isNotEmpty) {
-      _titleController.text = widget.expence.title;
+    if (widget.expence.amount.isNotEmpty) {
+      _amountController.text = widget.expence.amount;
       _descController.text = widget.expence.decsription;
       _selectedDate = widget.expence.date;
       _selectedCategory = widget.expence.category;
@@ -134,11 +134,11 @@ class _AddNewExpencceState extends State<AddNewExpencce> {
       padding: const EdgeInsets.all(16).copyWith(top: 48),
       child: Column(
         children: [
-          // title
+          // amount
           TextField(
-            controller: _titleController,
+            controller: _amountController,
             decoration: const InputDecoration(
-                hintText: "Add the Task title", label: Text("Task Title")),
+                hintText: "Add the Task amount", label: Text("Task amount")),
             keyboardType: TextInputType.text,
             maxLength: 50,
           ),
