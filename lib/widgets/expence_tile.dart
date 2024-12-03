@@ -29,7 +29,7 @@ class ExpenceItem extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  '${expence.decsription}',
+                  expence.decsription,
                 ),
                 const Spacer(),
                 Row(

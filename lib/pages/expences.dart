@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:expense_tracker/models/expence.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:expense_tracker/widgets/pie_chart.dart';
 
 class Expences extends StatefulWidget {
   const Expences({super.key});

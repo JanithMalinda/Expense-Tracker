@@ -1,6 +1,4 @@
 import 'package:expense_tracker/pages/auth-pages/login.dart';
-import 'package:expense_tracker/pages/expences.dart';
-import 'package:expense_tracker/pages/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';

@@ -34,7 +34,7 @@ class _SignUpPageState extends State<SignUpPage> {
         'email': email,
         'contactNumber': contactNumber,
         'role': 'customer', // Default role
-        'password': password,
+        // 'password': password, 
       });
 
       Fluttertoast.showToast(
