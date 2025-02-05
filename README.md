@@ -1,16 +1,49 @@
-# expense_tracker
+# Expense Tracker
 
-A new Flutter project.
+A feature-rich mobile application designed to help users track and manage their expenses efficiently. Built with Flutter for a seamless and intuitive user experience.
+
+## Features
+
+- **Expense Tracking**: Easily record daily expenses with customizable categories.
+- **User-Friendly Interface**: Simple, clean, and intuitive design for all users.
+- **Data Persistence**: Securely store and manage expense data.
+
+## Technologies Used
+
+- **Frontend**: Flutter framework for cross-platform mobile development.
+- **State Management**: Provider
+- **Backend/Database**: Firebase
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To set up and run the project locally:
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter SDK installed
+- Android Studio/Visual Studio Code configured with Flutter
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JanithMalinda/Expense-Tracker.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Expense-Tracker
+   ```
+3. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+4. Run the app:
+   ```bash
+   flutter run
+   ```
+
+## Future Enhancements
+
+- Add support for multiple currencies.
+- Integrate expense sharing with family or friends.
+- Provide export options for reports in PDF or Excel format.
